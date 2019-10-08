@@ -1,1 +1,11 @@
 /*用于放一些基本样式*/
+*{
+  margin: 0;
+  padding: 0;
+}
+a{
+  text-decoration: none;
+}
+body{
+  background: #f8f8f9;
+}
