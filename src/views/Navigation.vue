@@ -12,11 +12,9 @@
 </template>
 
 <script>
-  import HeaderNav from "../components/HeaderNav";
   export default {
     name: "Navigation",
     components: {
-      HeaderNav
     }
   }
 </script>
@@ -35,6 +33,7 @@
     font-size: 3em;
     padding-top: 2.3em;
     margin: 50px;
+    white-space: nowrap;
     text-align: center;
     cursor: pointer;
     border-radius: 5%;

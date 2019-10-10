@@ -2,7 +2,7 @@ const routes = [
 
   {
     path: '*',
-    redirect: '/Navigation'
+    redirect: '/Information'
   },
   {
     path: '/Navigation',
@@ -16,7 +16,7 @@ const routes = [
     meta: {
       title: '学生信息查询'
     },
-    component: () => import('../views/InformationSearch')
+    component: () => import('../views/InformationSearch/InformationSearchMain')
   },
   {
     path: '/MemberManage',

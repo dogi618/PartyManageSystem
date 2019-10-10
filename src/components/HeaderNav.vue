@@ -1,52 +1,42 @@
 <template>
-  <nav>
-    <div class="left">
-      <img src="" alt="Logo照片">
-      <h3>党务管理系统</h3>
-    </div>
-    <div class="right">
-      <span>切换用户</span>
-      <span>{{user}}</span>
-      <span>退出</span>
-    </div>
-  </nav>
-
+  <div id="background">
+    <nav id="header-nav">
+      <router-link class="header-nav-item" to="/Information" tag="div">学生信息查询</router-link>
+      <router-link class="header-nav-item" to="/MemberManage" tag="div">党员管理</router-link>
+      <router-link class="header-nav-item" to="/VolunteerAduit" tag="div">志愿时审核</router-link>
+      <router-link class="header-nav-item" to="/MemberManage" tag="div">权限管理</router-link>
+    </nav>
+  </div>
 </template>
 
 <script>
   export default {
-    name: "HeaderNav",
-    props: {
-      user: {
-        type: String,
-        default: '用户名'
-      }
-    },
+    name: "SideNav"
   }
 </script>
 
 <style scoped>
-  nav {
-    height: 50px;
+  #background {
+    width: 100%;
+    background-color: salmon;
+
+  }
+  #header-nav {
+    margin: 1px auto;
+    width: 1200px;
+    height: 35px;
     display: flex;
-    border-bottom: 1px solid rgba(23,8,22,0.71);
+    border-right: 1px solid black;
   }
-  .left {
+  .header-nav-item {
     flex: 1;
-    padding-left: 10px;
-  }
-  .right {
-    flex: 1;
-    padding-right: 20px;
-    padding-top: 1em;
-    text-align: right;
-  }
-  span {
-    margin-left: 1em;
+    font-size: 1.4em;
+    border-left: 1px solid black;
     cursor: pointer;
+    color: white;
+    text-align: center;
   }
-  h3 {
-    margin: 15px 0 0 1em;
-    display: inline-block;
+  .header-nav-item:hover {
+    border-bottom: 3px solid yellow;
   }
 </style>
